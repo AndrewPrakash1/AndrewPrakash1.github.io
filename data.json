@@ -1,0 +1,129 @@
+{
+  "_edit": "All site copy lives in this file. Fill config URLs to show those buttons; leave them empty to hide. Ratings are never hardcoded — Codeforces rating is fetched live from the public API and omitted if that request fails.",
+  "config": {
+    "linkedin": "https://www.linkedin.com/in/andrew-prakash-2687a2242",
+    "leetcode": "",
+    "codeforces": "https://codeforces.com/profile/Vectorique_2506",
+    "codeforcesHandle": "Vectorique_2506",
+    "substack": "https://substack.com/@andrewpraks"
+  },
+  "site": {
+    "title": "Andrew Prakash",
+    "description": "Engineering student at Thapar Institute of Engineering and Technology. Computer Vision, ML/AI.",
+    "url": "https://andrewprakash1.github.io"
+  },
+  "person": {
+    "name": "Andrew Prakash",
+    "mark": "AP",
+    "headline": "Engineering student at Thapar Institute of Engineering and Technology",
+    "focus": ["Computer Vision", "ML/AI"],
+    "skills": [
+      "Python",
+      "C++",
+      "C",
+      "Machine Learning",
+      "PyTorch",
+      "NumPy",
+      "Pandas"
+    ]
+  },
+  "socials": {
+    "github": "https://github.com/AndrewPrakash1",
+    "x": "https://x.com/AndrewBenj71771"
+  },
+  "nav": [
+    { "id": "papers", "label": "Papers" },
+    { "id": "projects", "label": "Projects" },
+    { "id": "open-source", "label": "Open source" },
+    { "id": "writing", "label": "Writing" },
+    { "id": "compete", "label": "Compete" }
+  ],
+  "sections": {
+    "papers": {
+      "title": "Papers",
+      "intro": "Paper implementations."
+    },
+    "projects": {
+      "title": "Projects",
+      "intro": "Selected repositories."
+    },
+    "opensource": {
+      "title": "Open source",
+      "intro": "Contribution currently under review."
+    },
+    "writing": {
+      "title": "Writing",
+      "intro": "Posts and notes."
+    },
+    "compete": {
+      "title": "Compete",
+      "intro": "Competitive programming solutions."
+    }
+  },
+  "papers": [
+    {
+      "name": "GPT-Implementation",
+      "url": "https://github.com/AndrewPrakash1/GPT-Implementation",
+      "description": "Decoder-only GPT implemented from scratch in Python."
+    },
+    {
+      "name": "ML",
+      "url": "https://github.com/AndrewPrakash1/ML",
+      "description": "Python implementation of Stanford CS229."
+    },
+    {
+      "name": "machines-play",
+      "url": "https://github.com/AndrewPrakash1/machines-play",
+      "description": "Python mesa model for Cloos et al., “Is this machine playing?” (arXiv:2610.07130)."
+    }
+  ],
+  "projects": [
+    {
+      "name": "drone-video-3d",
+      "url": "https://github.com/AndrewPrakash1/drone-video-3d",
+      "description": "Single-pass drone video to georeferenced, metrically checkable 3D reconstruction."
+    },
+    {
+      "name": "Heat_Sink",
+      "url": "https://github.com/AndrewPrakash1/Heat_Sink",
+      "description": "Physics-based real-time thermal simulator that reads live CPU power and predicts 2D heat-sink temperature with the finite difference method."
+    },
+    {
+      "name": "RegIntel",
+      "url": "https://github.com/AndrewPrakash1/RegIntel",
+      "description": "Regulatory intelligence platform that turns uploaded regulatory documents into themes, impact forecasts, and recommended actions."
+    },
+    {
+      "name": "Churn",
+      "url": "https://github.com/AndrewPrakash1/Churn",
+      "description": "Indian telecom customer churn prediction."
+    },
+    {
+      "name": "-Binary-Music-Classification-Sabrina-Carpenter-Taylor-Swfit-",
+      "title": "Binary Music Classification",
+      "url": "https://github.com/AndrewPrakash1/-Binary-Music-Classification-Sabrina-Carpenter-Taylor-Swfit-",
+      "description": "CNN music classifier for Sabrina Carpenter vs Taylor Swift."
+    }
+  ],
+  "opensource": [
+    {
+      "title": "[BUG] preserve pretrained state in forecaster tuners",
+      "detail": "Fixes sktime #11503 by keeping pretrained forecaster state in tuner clone/set_params paths.",
+      "url": "https://github.com/sktime/sktime/pull/11514",
+      "status": "Open PR, under review",
+      "repo": "sktime/sktime"
+    }
+  ],
+  "writing": {
+    "label": "Substack",
+    "url": "https://substack.com/@andrewpraks",
+    "description": "Writing on Substack."
+  },
+  "competitive": {
+    "solutions": {
+      "name": "Codeforces-Solns-to-Problems-",
+      "url": "https://github.com/AndrewPrakash1/Codeforces-Solns-to-Problems-",
+      "description": "Solutions to Codeforces problems."
+    }
+  }
+}
