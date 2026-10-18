@@ -32,6 +32,7 @@
     "x": "https://x.com/AndrewBenj71771"
   },
   "nav": [
+    { "id": "highlights", "label": "Highlights" },
     { "id": "papers", "label": "Papers" },
     { "id": "projects", "label": "Projects" },
     { "id": "open-source", "label": "Open source" },
@@ -39,6 +40,10 @@
     { "id": "compete", "label": "Compete" }
   ],
   "sections": {
+    "highlights": {
+      "title": "Highlights",
+      "intro": "Hackathon finalist."
+    },
     "papers": {
       "title": "Papers",
       "intro": "Paper implementations."
@@ -118,6 +123,56 @@
     "label": "Substack",
     "url": "https://substack.com/@andrewpraks",
     "description": "Writing on Substack."
+  },
+  "highlights": {
+    "badge": "Finalist, Qualcomm Snapdragon Multiverse Hackathon",
+    "items": [
+      {
+        "kicker": "Finalist",
+        "title": "Qualcomm Snapdragon Multiverse Hackathon",
+        "project": "Sentinel Rover",
+        "summary": "An augmented-reality industrial safety assistant: a self-driving rover that patrols warehouse space and inspects for hazards like misplaced pallets or blocked aisles.",
+        "architecture": [
+          {
+            "part": "Snapdragon phone NPU",
+            "detail": "Runs optimized YOLO object detection on a low-latency video stream."
+          },
+          {
+            "part": "Arduino UNO Q",
+            "detail": "Physical safety interlock (piezo buzzers, LEDs, motor PWM)."
+          },
+          {
+            "part": "Qualcomm Cloud AI 100",
+            "detail": "Runs a Vision-Language Model for scene reasoning, producing safety reports on a central dashboard."
+          }
+        ],
+        "team": ["Andrew Prakash", "Piyush Tandon", "Ashwani Chaurasia"],
+        "links": [
+          {
+            "label": "Read the LinkedIn post",
+            "url": "https://www.linkedin.com/feed/update/urn:li:activity:7485555214935031809/"
+          },
+          {
+            "label": "Code",
+            "url": "https://github.com/AndrewPrakash1/Rover"
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/img/hackathon-laptop-badges.jpg",
+            "alt": "Laptop showing code with Snapdragon Multiverse Hackathon badges for Sentinel Rover."
+          },
+          {
+            "src": "assets/img/hackathon-hall.jpg",
+            "alt": "Hackathon hall with participants seated on beanbags."
+          },
+          {
+            "src": "assets/img/hazard-inspector-dashboard.jpg",
+            "alt": "Laptop showing the Hazard Inspector dashboard during the hackathon."
+          }
+        ]
+      }
+    ]
   },
   "competitive": {
     "solutions": {
