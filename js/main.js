@@ -52,6 +52,13 @@ function renderHero(data) {
     <span class="line accent">${escapeHtml(rest)}</span>
   `;
   el("hero-lede").textContent = data.person.focus.join(" · ");
+  const badge = data.highlights?.badge;
+  const badgeRow = el("hero-badge-row");
+  if (filled(badge)) {
+    badgeRow.innerHTML = `<a class="hero-badge" href="#highlights">${escapeHtml(badge)}</a>`;
+  } else {
+    badgeRow.replaceChildren();
+  }
   el("skill-row").innerHTML = data.person.skills
     .map((skill) => `<li>${escapeHtml(skill)}</li>`)
     .join("");
@@ -81,6 +88,7 @@ function renderHero(data) {
 
 function renderSectionHeads(sections) {
   const map = {
+    highlights: "highlights",
     papers: "papers",
     projects: "projects",
     opensource: "open-source",
@@ -95,6 +103,54 @@ function renderSectionHeads(sections) {
     if (title) title.textContent = sections[key].title;
     if (intro) intro.textContent = sections[key].intro;
   });
+}
+
+function renderHighlights(data) {
+  const list = el("highlights-list");
+  const items = data.highlights?.items || [];
+  if (!items.length) {
+    list.closest("section")?.remove();
+    return;
+  }
+  list.innerHTML = items
+    .map((item) => {
+      const architecture = (item.architecture || [])
+        .map(
+          (row) => `
+          <li>
+            <span class="arch-part">${escapeHtml(row.part)}</span>
+            <span>${escapeHtml(row.detail)}</span>
+          </li>`
+        )
+        .join("");
+      const team = (item.team || []).map((name) => escapeHtml(name)).join(" · ");
+      const links = (item.links || [])
+        .filter((link) => filled(link.url))
+        .map((link) => extLink(link.url, escapeHtml(link.label), "chip-link"))
+        .join("");
+      const images = (item.images || [])
+        .map(
+          (image) => `
+          <figure>
+            <a href="${escapeHtml(image.src)}" target="_blank" rel="noopener noreferrer">
+              <img src="${escapeHtml(image.src)}" alt="${escapeHtml(image.alt)}" loading="lazy" />
+            </a>
+          </figure>`
+        )
+        .join("");
+      return `
+        <article class="highlight-card">
+          <span class="status">${escapeHtml(item.kicker)}</span>
+          <h3>${escapeHtml(item.project)}</h3>
+          <p class="highlight-event">${escapeHtml(item.title)}</p>
+          <p>${escapeHtml(item.summary)}</p>
+          <ul class="arch-list">${architecture}</ul>
+          <p class="team-line">Team: ${team}</p>
+          <div class="profile-row">${links}</div>
+          <div class="gallery">${images}</div>
+        </article>`;
+    })
+    .join("");
 }
 
 function renderPapers(papers) {
@@ -265,6 +321,7 @@ async function boot() {
   renderNav(data);
   renderSectionHeads(data.sections);
   renderHero(data);
+  renderHighlights(data);
   renderPapers(data.papers);
   renderProjects(data.projects);
   renderOpenSource(data.opensource);

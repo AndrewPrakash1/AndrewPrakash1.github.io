@@ -14,7 +14,7 @@ All copy, links, and project lists live in **`data.json`**. Change that file and
 | --- | --- |
 | `person` | Name, headline, focus areas, skills |
 | `socials.github` / `socials.x` | Shown in the header, hero, and footer |
-| `papers`, `projects`, `opensource`, `writing`, `competitive` | Section items and URLs |
+| `papers`, `projects`, `opensource`, `writing`, `competitive`, `highlights` | Section items, URLs, and gallery images |
 | `sections` | Section titles and short intros |
 | `config` | Optional profile URLs (hidden until filled) |
 
@@ -63,5 +63,6 @@ index.html    page shell
 data.json     all content
 css/styles.css
 js/main.js    loads data.json and renders the page
+assets/img/   photos referenced from data.json
 favicon.svg
 ```

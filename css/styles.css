@@ -316,6 +316,32 @@ main {
   margin-top: 2.4rem;
 }
 
+.hero-badge-row {
+  margin: 1.5rem 0 0;
+}
+
+.hero-badge-row:empty {
+  display: none;
+}
+
+.hero-badge {
+  display: inline-flex;
+  padding: 0.35rem 0.7rem;
+  max-width: 100%;
+  background: var(--lime);
+  color: var(--bg);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 13px;
+  transition: background 0.18s var(--ease), transform 0.18s var(--ease);
+}
+
+.hero-badge:hover,
+.hero-badge:focus-visible {
+  background: var(--cyan);
+  transform: translateY(-1px);
+}
+
 .ticker {
   overflow: hidden;
   border-top: 1px dashed var(--line);
@@ -579,9 +605,108 @@ main {
 }
 
 .compete-grid,
-.writing-list {
+.writing-list,
+.highlights-list {
   display: grid;
   gap: 0.75rem;
+}
+
+.highlight-card {
+  display: grid;
+  gap: 0.85rem;
+  padding: 1.25rem;
+  border: 1px dashed var(--line);
+}
+
+.highlight-card:hover,
+.highlight-card:focus-within {
+  border-color: var(--ink);
+}
+
+.highlight-card h3 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-family: var(--font-display);
+  font-stretch: 85%;
+  font-weight: 800;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.highlight-card > p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 46rem;
+}
+
+.highlight-card > p.highlight-event {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cyan);
+}
+
+.highlight-card > p.team-line {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 13px;
+  color: var(--faint);
+  max-width: none;
+}
+
+.arch-list {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0.3rem 0;
+}
+
+.arch-list li {
+  display: grid;
+  gap: 0.2rem;
+  padding-left: 0.85rem;
+  border-left: 2px solid var(--lime);
+  color: var(--muted);
+}
+
+.arch-part {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 0.75rem;
+  align-items: start;
+  margin-top: 0.5rem;
+}
+
+.gallery figure {
+  margin: 0;
+  border: 1px dashed var(--line);
+  background: #08080c;
+}
+
+.gallery figure:first-child {
+  grid-row: 1 / span 2;
+}
+
+.gallery a {
+  display: block;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.gallery a:hover img,
+.gallery a:focus-visible img {
+  opacity: 0.92;
 }
 
 .rating-badge {
@@ -706,6 +831,14 @@ main {
 
   .card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery figure:first-child {
+    grid-row: auto;
   }
 }
 
